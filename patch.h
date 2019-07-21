@@ -1,5 +1,3 @@
-#include "morton.h"
-
 class Patch {
     double xmin, xmax;
     double ymin, ymax;

@@ -2,8 +2,8 @@
 #include <fstream>
 #include <cmath>
 #include <bitset>
-#include "patch.h"
 #include "morton.h"
+#include "patch.h"
 
 //using namespace std;
 void print_binary(int bit) {
@@ -15,67 +15,67 @@ void print_binary(int bit) {
     }
     std::cout << bitstr << "\n";
 }
-
-void depth_first(Patch *tree) {
-    /* Start at root */
-    unsigned int indx = 0;
-
-
-}
-
-unsigned int get_parent(unsigned int indx) {
-    // Take off last two bits 
-    return indx >> 2;
-} 
-unsigned int right_neighbor(unsigned int indx) {
-    /********
-     * 00 01 
-     * 10 11
-     * ******
-     */
-    // if 00 or 10 then right neighbor is 01 or 11
-    // return indx + 1
-    // if 01 or 11 then it is right neighbor of parent 00 10
-    // You go up until your parent is 00 or 10
-
-}
-unsigned int left_neighbor(unsigned int indx) {
-    /********
-     * 00 01 
-     * 10 11
-     * ******
-     */
-    // if 01 or 11 then right neighbor is 00 or 10
-    // return indx - 1
-    // if 00 or 10 then it is left neighbor of parent 01 11
-    // You go up until your parent is 11 or 01
-
-}
-
-void level_indices(unsigned short lvl, unsigned int *list) {
-    return;
-}
-
-
-void build_tree(unsigned short depth) {
-    unsigned short lvl;
-
-    unsigned int ntot = 0;
-    for(lvl=0; lvl <= depth; lvl++) ntot += pow(4,lvl);
-
-    bool *mask;
-    mask = new bool[ntot];
-    Patch *tree;
-    tree = new Patch[ntot];
-
-
-    
-
-    delete[] tree;
-    delete[] mask;
-    return;
-}
-
+//
+//void depth_first(Patch *tree) {
+//    /* Start at root */
+//    unsigned int indx = 0;
+//
+//
+//}
+//
+//unsigned int get_parent(unsigned int indx) {
+//    // Take off last two bits 
+//    return indx >> 2;
+//} 
+//unsigned int right_neighbor(unsigned int indx) {
+//    /********
+//     * 00 01 
+//     * 10 11
+//     * ******
+//     */
+//    // if 00 or 10 then right neighbor is 01 or 11
+//    // return indx + 1
+//    // if 01 or 11 then it is right neighbor of parent 00 10
+//    // You go up until your parent is 00 or 10
+//
+//}
+//unsigned int left_neighbor(unsigned int indx) {
+//    /********
+//     * 00 01 
+//     * 10 11
+//     * ******
+//     */
+//    // if 01 or 11 then right neighbor is 00 or 10
+//    // return indx - 1
+//    // if 00 or 10 then it is left neighbor of parent 01 11
+//    // You go up until your parent is 11 or 01
+//
+//}
+//
+//void level_indices(unsigned short lvl, unsigned int *list) {
+//    return;
+//}
+//
+//
+//void build_tree(unsigned short depth) {
+//    unsigned short lvl;
+//
+//    unsigned int ntot = 0;
+//    for(lvl=0; lvl <= depth; lvl++) ntot += pow(4,lvl);
+//
+//    bool *mask;
+//    mask = new bool[ntot];
+//    Patch *tree;
+//    tree = new Patch[ntot];
+//
+//
+//    
+//
+//    delete[] tree;
+//    delete[] mask;
+//    return;
+//}
+//
 
 int main(int argc, char *argv[]) {
 
