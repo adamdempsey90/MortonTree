@@ -31,6 +31,8 @@ class Domain {
 
     protected:
     morton<N> root = 0;
+    uint maxlevel = 16;
+    double dims = 3;
     double xmin, xmax;
     double ymin, ymax;
     double zmin, zmax;
@@ -40,5 +42,27 @@ class Domain {
 
 
     public:
-    Domain()
+    Domain(double ext[6]);
+    Domain(void);
+    void get_neighbors(morton<N> key, morton<N> *list);
+    void get_level(morton<N> key);
+    void split(morton<N> key);
+    void merge(morton<N> key);
 };
+
+template <size_t N, typename value>
+Domain::Domain(void) {
+    xmin = 0.;
+    xmax = 0.;
+    ymin = 0.;
+    ymax = 0.;
+    zmin = 0.;
+    zmax = 0.;
+
+    mesh.insert({0,nullptr});
+
+}
+
+
+
+
