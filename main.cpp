@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include <cstring>
 #include <bitset>
 #include "morton.h"
 #include "patch.h"
@@ -109,7 +110,7 @@ int main(int argc, char *argv[]) {
 
     bool *mask;
     mask = new bool[npatches];
-    memset(mask,true,sizeof(bool)*npatches);
+    std::memset(mask,true,sizeof(bool)*npatches);
 
 
     //Patch *grid;
