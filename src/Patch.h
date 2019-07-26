@@ -24,8 +24,10 @@ class Patch2D {
         real dx1[NP], dx2[NP];
         real cons[NTP*5];
         real prim[NTP*5];
+        bool mask[NTP];
         real intenergy[NTP];
         real *scalars;
+
 
         real xmin, xmax, ymin, ymax;
     public:
@@ -41,8 +43,9 @@ class Patch2D {
         void host_to_dev();
         void dev_to_host();
 
+        real evolve(); // returns new dt 
 
-        
+        void integrate();
 
 
 

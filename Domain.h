@@ -1,5 +1,0 @@
-
-class Domain {
-    /* Domain holds 
-
-};
