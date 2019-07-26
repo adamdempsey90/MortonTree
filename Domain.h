@@ -1,0 +1,5 @@
+
+class Domain {
+    /* Domain holds 
+
+};
